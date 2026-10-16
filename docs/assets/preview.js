@@ -41,7 +41,16 @@ function renderProducts(){
 }
 function setCategory(name){
   activeCategory=name;
-  document.querySelectorAll(".filter-chip").forEach(button=>{const active=button.dataset.filter===name;button.classList.toggle("active",active);button.setAttribute("aria-pressed",String(active))});
+  /* Sidebar and commercial banner shortcuts share the same catalog filtering state. */
+document.querySelectorAll("[data-market-filter]").forEach(control=>control.addEventListener("click",event=>{
+  if(control.tagName==="A")event.preventDefault();
+  const category=control.getAttribute("data-market-filter");
+  if(!category)return;
+  selectors.search.value="";
+  setCategory(category);
+  document.getElementById("catalog").scrollIntoView({behavior:"smooth"});
+}));
+document.querySelectorAll(".filter-chip").forEach(button=>{const active=button.dataset.filter===name;button.classList.toggle("active",active);button.setAttribute("aria-pressed",String(active))});
   renderProducts();
 }
 function showProduct(id){

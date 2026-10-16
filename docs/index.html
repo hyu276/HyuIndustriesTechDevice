@@ -13,47 +13,70 @@
 <body>
   <a class="skip-link" href="#main">Chuyển đến nội dung</a>
   <div class="preview-ribbon">BẢN XEM TRƯỚC TRÊN GITHUB PAGES <span class="ribbon-divider">/</span> GIÁ & TỒN KHO MINH HỌA <span class="ribbon-divider">/</span> KHÔNG THANH TOÁN THẬT</div>
-  <header class="site-header">
-    <div class="shell header-row">
-      <a class="wordmark" href="./" aria-label="HYU Industries trang chủ">HYU<span>.</span></a>
-      <nav class="main-nav" aria-label="Điều hướng chính">
-        <a href="#catalog">Sản phẩm</a>
-        <a href="#categories">Danh mục</a>
-        <a href="#about">Về HYU</a>
-      </nav>
-      <form class="header-search" id="searchForm" role="search">
+  <header class="site-header market-site-header">
+    <div class="market-utility"><div class="shell market-utility-inner"><span>HYU INDUSTRIES / TECH DEVICE</span><nav aria-label="Thông tin cửa hàng"><a href="#catalog">Hướng dẫn khám phá</a><a href="#categories">Danh mục</a><span>PREVIEW · DEMO ONLY</span></nav></div></div>
+    <div class="shell market-header-row">
+      <a class="wordmark market-wordmark" href="./" aria-label="Trang chủ HYU Industries">HYU<span>.</span><small>TECH DEVICE</small></a>
+      <form class="header-search market-search-box" id="searchForm" role="search">
         <label class="sr-only" for="searchInput">Tìm sản phẩm</label>
         <svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><circle cx="10.8" cy="10.8" r="6.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.8"/></svg>
-        <input id="searchInput" type="search" placeholder="Tìm thiết bị, thông số..." autocomplete="off">
-        <button type="submit" class="search-submit" aria-label="Xem kết quả tìm kiếm">↗</button>
+        <input id="searchInput" type="search" placeholder="Bạn đang tìm laptop, PC hay phụ kiện gì?" autocomplete="off">
+        <button type="submit" class="market-search-submit" aria-label="Xem kết quả tìm kiếm">Tìm kiếm <span aria-hidden="true">↗</span></button>
       </form>
-      <button class="cart-trigger" type="button" id="openCart" aria-label="Xem giỏ hàng demo">
-        <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16l-1.3 13H5.3L4 7Z"/><path d="M9 9V5a3 3 0 0 1 6 0v4"/></svg>
-        <span>Giỏ hàng</span><span class="cart-count" id="cartCount">0</span>
-      </button>
+      <a href="#categories" class="market-head-shortcut"><span class="market-shortcut-symbol" aria-hidden="true">▦</span><span><strong>Danh mục</strong><small>Khám phá thiết bị</small></span></a>
+      <button class="cart-trigger market-cart-trigger" type="button" id="openCart" aria-label="Xem giỏ hàng demo"><span class="market-shortcut-symbol" aria-hidden="true">▢</span><span class="market-cart-copy"><strong>Giỏ hàng demo</strong><small>Trên trình duyệt</small></span><span class="cart-count" id="cartCount">0</span></button>
     </div>
+    <nav class="market-link-bar" aria-label="Điều hướng cửa hàng"><div class="shell market-link-inner">
+      <a class="market-category-trigger" href="#categories"><span aria-hidden="true">☷</span> DANH MỤC SẢN PHẨM</a>
+      <a href="#catalog">Tất cả sản phẩm</a><a href="#catalog" data-market-filter="Laptop">Laptop</a>
+      <a href="#catalog" data-market-filter="Desktop">PC &amp; Desktop</a>
+      <a href="#catalog" data-market-filter="Điện thoại">Điện thoại</a>
+      <a href="#catalog" data-market-filter="Phụ kiện">Phụ kiện</a>
+      <a href="#catalog" data-market-filter="Linh kiện">Linh kiện</a><span class="market-link-status">● STATIC PREVIEW</span>
+    </div></nav>
   </header>
   <main id="main">
-    <section class="hero" aria-labelledby="heroTitle">
-      <div class="shell hero-layout">
-        <div class="hero-copy">
-          <div class="mono hero-eyebrow"><span class="eyebrow-line"></span> HYU INDUSTRIES / DEVICE DIVISION — 001</div>
-          <h1 id="heroTitle">Công nghệ<br>cho bước tiến<br><em>tiếp theo.</em></h1>
-          <p>Từ góc làm việc đến thế giới sáng tạo. Khám phá những thiết bị được trình bày rõ ràng, với trải nghiệm mua sắm trực quan trên mọi màn hình.</p>
-          <div class="hero-actions">
-            <a class="button button-lime" href="#catalog">Khám phá sản phẩm <span aria-hidden="true">↗</span></a>
-            <a class="quiet-link" href="#about">Tìm hiểu HYU <span aria-hidden="true">→</span></a>
+    <section class="market-showcase" aria-labelledby="heroTitle">
+      <div class="shell market-showcase-layout">
+        <aside class="market-sidebar" aria-label="Danh mục thiết bị">
+          <div class="market-sidebar-title">KHÁM PHÁ DANH MỤC <span aria-hidden="true">☷</span></div>
+          <div class="market-sidebar-list">
+            <button type="button" data-market-filter="Laptop"><span class="market-side-icon">▣</span><span><strong>Laptop</strong><small>Làm việc &amp; học tập</small></span><i aria-hidden="true">›</i></button>
+            <button type="button" data-market-filter="Desktop"><span class="market-side-icon">▤</span><span><strong>Desktop</strong><small>Máy tính để bàn</small></span><i aria-hidden="true">›</i></button>
+            <button type="button" data-market-filter="Điện thoại"><span class="market-side-icon">▯</span><span><strong>Điện thoại</strong><small>Thiết bị di động</small></span><i aria-hidden="true">›</i></button>
+            <button type="button" data-market-filter="Linh kiện"><span class="market-side-icon">⬡</span><span><strong>Linh kiện</strong><small>Nâng cấp PC</small></span><i aria-hidden="true">›</i></button>
+            <button type="button" data-market-filter="Phụ kiện"><span class="market-side-icon">⌘</span><span><strong>Phụ kiện</strong><small>Góc làm việc</small></span><i aria-hidden="true">›</i></button>
           </div>
-          <div class="hero-footnote mono">PREVIEW BUILD <span>© 2026</span> <span>DESIGNED FOR WHAT'S NEXT</span></div>
-        </div>
-        <div class="hero-visual" aria-label="Hình minh họa máy tính xách tay">
-          <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
-          <div class="laptop-art"><div class="laptop-screen"><div class="screen-glow"></div><div class="screen-glyph">H<span>.</span></div></div><div class="laptop-base"></div></div>
-          <div class="visual-caption mono"><span>01 /</span> INDUSTRIAL PERFORMANCE<br>ENGINEERED FOR IDEAS</div>
+          <a class="market-sidebar-all" href="#catalog">XEM TẤT CẢ THIẾT BỊ <span aria-hidden="true">↗</span></a>
+        </aside>
+        <div class="market-stage">
+          <div class="market-main-banner">
+            <div class="market-banner-copy"><p class="mono market-kicker">HYU INDUSTRIES / DEVICE COLLECTION</p>
+              <h1 id="heroTitle">Chọn công nghệ.<br><em>Chọn khả năng.</em></h1>
+              <p>Tìm hiểu cấu hình, so sánh mức giá minh họa và khám phá những thiết bị phù hợp với công việc của bạn.</p>
+              <a href="#catalog" class="button button-lime market-main-action">Khám phá sản phẩm <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="market-main-illustration" aria-hidden="true"><div class="laptop-art"><div class="laptop-screen"><div class="screen-glow"></div><div class="screen-glyph">H<span>.</span></div></div><div class="laptop-base"></div></div></div>
+            <span class="mono market-banner-counter">01 / PREVIEW</span>
+          </div>
+          <div class="market-side-promos">
+            <button class="market-side-promo market-side-promo-green" type="button" data-market-filter="Desktop">
+              <span class="mono">BUILD YOUR SETUP</span><strong>Hiệu năng cho<br>mọi dự án<span>.</span></strong><span class="market-promo-link">Xem Desktop ↗</span><span class="market-promo-device" aria-hidden="true"><span class="device-art desktop"></span></span>
+            </button>
+            <button class="market-side-promo market-side-promo-beige" type="button" data-market-filter="Phụ kiện">
+              <span class="mono">THE SMALL DETAILS</span><strong>Góc làm việc.<br>Nâng tầm trải nghiệm.</strong><span class="market-promo-link">Xem phụ kiện ↗</span><span class="market-promo-device" aria-hidden="true"><span class="device-art headset"></span></span>
+            </button>
+          </div>
         </div>
       </div>
     </section>
-    <section class="categories section" id="categories">
+    <div class="shell market-benefits" aria-label="Tính năng bản xem trước">
+      <div><span aria-hidden="true">⌕</span><p><strong>Tìm nhanh theo nhu cầu</strong><small>Danh mục công nghệ rõ ràng</small></p></div>
+      <div><span aria-hidden="true">▤</span><p><strong>Thông số dễ so sánh</strong><small>Thông tin có sẵn trên thẻ</small></p></div>
+      <div><span aria-hidden="true">▢</span><p><strong>Giỏ hàng demo</strong><small>Không thu tiền hay tạo đơn thật</small></p></div>
+    </div>
+    
+  <section class="categories section" id="categories">
       <div class="shell">
         <div class="section-intro"><div><p class="mono section-label">EXPLORE THE RANGE</p><h2>Chọn đúng thiết bị.<br>Cho đúng khả năng.</h2></div><a class="text-action" href="#catalog">Toàn bộ danh mục <span aria-hidden="true">↗</span></a></div>
         <div class="category-grid">
