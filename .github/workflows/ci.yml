@@ -20,4 +20,6 @@ jobs:
       - run: npm run lint
       - run: npm run typecheck
       - run: npm test
+      - run: node --check docs/assets/preview.js
+      - run: test -s docs/index.html
       - run: npm run build
