@@ -1,0 +1,1 @@
+import{NextResponse}from"next/server";import{products}from"@/lib/database";export const dynamic="force-dynamic";export function GET(){return NextResponse.json(products())}

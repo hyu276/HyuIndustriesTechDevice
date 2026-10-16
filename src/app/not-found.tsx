@@ -1,0 +1,1 @@
+import Link from"next/link";export default function NotFound(){return <main className="wrap section"><h1 className="section-title">Trang không tồn tại.</h1><Link href="/" className="btn dark">Về trang chủ</Link></main>}
